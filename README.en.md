@@ -2,6 +2,9 @@
 
 A Flutter app to browse Pokémon data from the [PokeAPI](https://pokeapi.co/). Browse the catalog, search by name, filter by type, view details, and save favorites.
 
+
+Cursor IDE was used to develop this project, I set up the structure folder to use clean architecture and created the methods to fetch the data from the API, then I asked the agent to create the entities and implementations of those calls, also helping me generating the @freezed and @riverpod files. The agent was used to do an initial UI of each screen and then I worked on that code to make it look more like the original designs and also fixing small UI bugs. I implemented the filter, search and favorites functionalities, specifing how it should work to the agent to fix not desired behaviour. Finally I asked the agent to make the corresponding tests and I verify them.
+
 ---
 
 ## How to Run

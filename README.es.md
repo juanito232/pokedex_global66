@@ -2,6 +2,9 @@
 
 Aplicación Flutter para consultar datos de Pokémon desde [PokeAPI](https://pokeapi.co/). Explora el catálogo, busca por nombre, filtra por tipo, consulta detalles y guarda favoritos.
 
+
+Se utilizó Cursor IDE para desarrollar este proyecto. Configuré las carpetas de estructura usando principios de clean architecture y creé los métodos para obtener los datos de la API. Posteriormente, le pedí al agente que creara las entidades e implementaciones de dichas llamadas, ayudándome también a generar los archivos @freezed y @riverpod. El agente se utilizó para crear una interfaz de usuario inicial de cada pantalla y, posteriormente, trabajé en ese código para que se asemejara más a los diseños originales, también corrigiendo pequeños errores de interfaz. Implementé las funciones de filtro, búsqueda y favoritos, especificando su funcionamiento al agente para corregir comportamientos no deseados. Finalmente, le pedí que realizara las pruebas correspondientes y las verifiqué.
+
 ---
 
 ## Cómo ejecutar
