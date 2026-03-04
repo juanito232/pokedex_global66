@@ -22,13 +22,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final l10n = AppLocalizations.of(context)!;
     return [
       OnboardingPageData(
-        imagePath: 'assets/images/tour_1.png',
+        imagePaths: ['assets/images/tour_1.png', 'assets/images/tour_2.png'],
         title: l10n.onboardingTitle1,
         description: l10n.onboardingDesc1,
         buttonText: l10n.onboardingButtonContinue,
       ),
       OnboardingPageData(
-        imagePath: 'assets/images/tour_2.png',
+        imagePaths: ['assets/images/tour_3.png'],
         title: l10n.onboardingTitle2,
         description: l10n.onboardingDesc2,
         buttonText: l10n.onboardingButtonStart,

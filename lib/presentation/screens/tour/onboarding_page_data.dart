@@ -1,12 +1,12 @@
 class OnboardingPageData {
   const OnboardingPageData({
-    required this.imagePath,
+    required this.imagePaths,
     required this.title,
     required this.description,
     required this.buttonText,
   });
 
-  final String imagePath;
+  final List<String> imagePaths;
   final String title;
   final String description;
   final String buttonText;

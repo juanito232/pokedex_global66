@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_global66/presentation/widgets/tour/onboarding_page_data.dart';
+import 'package:pokedex_global66/presentation/screens/tour/onboarding_page_data.dart';
 
 class OnboardingPageContent extends StatelessWidget {
-  const OnboardingPageContent({
-    super.key,
-    required this.page,
-  });
+  const OnboardingPageContent({super.key, required this.page});
 
   final OnboardingPageData page;
 
@@ -18,17 +15,48 @@ class OnboardingPageContent extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 24),
-          Expanded(
-            flex: 2,
-            child: Image.asset(
-              page.imagePath,
-              filterQuality: FilterQuality.none,
-              fit: BoxFit.contain,
+          if (page.imagePaths.length > 1) ...[
+            Expanded(
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Positioned(
+                    left: -50,
+                    top: 0,
+                    right: 50,
+                    bottom: 0,
+                    child: Image.asset(
+                      page.imagePaths[0],
+                      filterQuality: FilterQuality.none,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  Positioned(
+                    left: 50,
+                    top: 0,
+                    right: -50,
+                    bottom: 0,
+                    child: Image.asset(
+                      page.imagePaths[1],
+                      filterQuality: FilterQuality.none,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ] else ...[
+            Expanded(
+              child: Image.asset(
+                page.imagePaths[0],
+                filterQuality: FilterQuality.none,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ],
           const SizedBox(height: 32),
           Text(
-            page.title, 
+            page.title,
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
               color: const Color(0xFF333333),
