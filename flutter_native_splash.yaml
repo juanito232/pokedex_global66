@@ -1,0 +1,4 @@
+# Run: dart run flutter_native_splash:create
+# To add Poké Ball: convert loader.svg to PNG (e.g. splash.png) and set image: assets/images/splash.png
+flutter_native_splash:
+  color: "#FFFFFF"

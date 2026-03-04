@@ -1,0 +1,75 @@
+{
+  "@@locale": "en",
+  "appTitle": "Pokédex",
+  "retry": "Retry",
+  "searchNoResults": "No search results",
+  "filterNoResults": "No Pokémon with that filter",
+  "noPokemonFound": "No Pokémon found",
+  "searchNoResultsSubtitle": "Try another name or search term.",
+  "filterNoResultsSubtitle": "Change the selected types to see more results.",
+  "noPokemonSubtitle": "No Pokémon available at this time.",
+  "resultsFound": "{count} results found",
+  "@resultsFound": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearFilter": "Clear filter",
+  "searchPlaceholder": "Search Pokémon...",
+  "filterTitle": "Filter by your preferences",
+  "typeLabel": "Type",
+  "apply": "Apply",
+  "cancel": "Cancel",
+  "navPokedex": "Pokedex",
+  "navRegions": "Regions",
+  "navFavorites": "Favorites",
+  "navProfile": "Profile",
+  "favoritesEmptyTitle": "You haven't marked any Pokémon as favorite",
+  "favoritesEmptySubtitle": "Tap the heart icon on your favorite Pokémon and they will appear here.",
+  "placeholderTitle": "Coming soon!",
+  "placeholderSubtitle": "We're working to bring you this section. Come back later to discover all the new features.",
+  "onboardingTitle1": "All Pokémon in one place",
+  "onboardingDesc1": "Access a wide list of Pokémon from all generations created by Nintendo",
+  "onboardingButtonContinue": "Continue",
+  "onboardingTitle2": "Keep your Pokédex updated",
+  "onboardingDesc2": "Sign up and save your profile, favorite Pokémon, settings and much more in the app",
+  "onboardingButtonStart": "Let's get started",
+  "pokemonNotFound": "Pokémon not found",
+  "errorTitle": "Something went wrong...",
+  "errorSubtitle": "We couldn't load the information right now. Check your connection or try again later.",
+  "weightLabel": "WEIGHT",
+  "heightLabel": "HEIGHT",
+  "categoryLabel": "CATEGORY",
+  "abilityLabel": "ABILITY",
+  "abilityLabelPlural": "ABILITIES",
+  "genderLabel": "GENDER",
+  "weaknessesLabel": "Weaknesses",
+  "pokemonNumber": "No. {number}",
+  "@pokemonNumber": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "typeBug": "Bug",
+  "typeDark": "Dark",
+  "typeDragon": "Dragon",
+  "typeElectric": "Electric",
+  "typeFairy": "Fairy",
+  "typeFighting": "Fighting",
+  "typeFire": "Fire",
+  "typeFlying": "Flying",
+  "typeGhost": "Ghost",
+  "typeGrass": "Grass",
+  "typeGround": "Ground",
+  "typeIce": "Ice",
+  "typeNormal": "Normal",
+  "typePoison": "Poison",
+  "typePsychic": "Psychic",
+  "typeRock": "Rock",
+  "typeSteel": "Steel",
+  "typeWater": "Water"
+}
