@@ -24,9 +24,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      final notifier = ref.read(paginatedPokemonListProvider.notifier);
       final state = ref.read(paginatedPokemonListProvider);
+      if (state.isSearchActive) {
+        notifier.setSearchQuery('');
+      }
       if (state.items.isEmpty && !state.isLoading) {
-        ref.read(paginatedPokemonListProvider.notifier).loadInitial();
+        notifier.loadInitial();
       }
     });
     _scrollController.addListener(_onScroll);
