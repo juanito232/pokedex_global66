@@ -62,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final pages = _buildPages(context);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [

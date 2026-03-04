@@ -12,10 +12,9 @@ class OnboardingPageIndicator extends StatelessWidget {
   final int currentPage;
   final Color activeColor;
 
-  static const _inactiveColor = Color(0xFFE0E0E0);
-
   @override
   Widget build(BuildContext context) {
+    final inactiveColor = Theme.of(context).colorScheme.outlineVariant;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
@@ -26,7 +25,7 @@ class OnboardingPageIndicator extends StatelessWidget {
           height: 8,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: index == currentPage ? activeColor : _inactiveColor,
+            color: index == currentPage ? activeColor : inactiveColor,
           ),
         ),
       ),

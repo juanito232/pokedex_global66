@@ -127,10 +127,12 @@ class _PokemonFilterSheetState extends State<PokemonFilterSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(36)),
+      decoration: BoxDecoration(
+        color: colorScheme.surface,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(36)),
       ),
       child: SafeArea(
         top: false,
@@ -156,8 +158,7 @@ class _PokemonFilterSheetState extends State<PokemonFilterSheet> {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 AppLocalizations.of(context)!.filterTitle,
-                style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
+                style: textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
@@ -171,16 +172,16 @@ class _PokemonFilterSheetState extends State<PokemonFilterSheet> {
                   Expanded(
                     child: Text(
                       AppLocalizations.of(context)!.typeLabel,
-                      style: TextStyle(
-                        fontSize: Theme.of(
-                          context,
-                        ).textTheme.titleMedium?.fontSize,
+                      style: textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                   const SizedBox(width: 8),
-                  Icon(Icons.keyboard_arrow_up, color: Colors.grey[600]),
+                  Icon(
+                    Icons.keyboard_arrow_up,
+                    color: colorScheme.onSurfaceVariant,
+                  ),
                 ],
               ),
             ),
@@ -209,9 +210,9 @@ class _PokemonFilterSheetState extends State<PokemonFilterSheet> {
                               height: 24,
                               width: 24,
                               padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Colors.white,
+                                color: colorScheme.surface,
                               ),
                               child: SvgPicture.asset(assetPath),
                             ),
@@ -219,10 +220,7 @@ class _PokemonFilterSheetState extends State<PokemonFilterSheet> {
                           ],
                           Text(
                             displayName,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                            ),
+                            style: textTheme.titleMedium,
                           ),
                         ],
                       ),
@@ -255,8 +253,8 @@ class _PokemonFilterSheetState extends State<PokemonFilterSheet> {
                       onPressed: _onCancel,
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
-                        backgroundColor: Colors.grey[100],
-                        foregroundColor: Colors.grey[700],
+                        backgroundColor: colorScheme.surfaceContainerHighest,
+                        foregroundColor: colorScheme.onSurfaceVariant,
                       ),
                       child: Text(AppLocalizations.of(context)!.cancel),
                     ),

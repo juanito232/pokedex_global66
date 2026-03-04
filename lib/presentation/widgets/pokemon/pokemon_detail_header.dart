@@ -23,20 +23,22 @@ class PokemonDetailHeader extends ConsumerWidget {
             .value
             ?.contains(pokemon.name.toLowerCase()) ??
         false;
+    final colorScheme = Theme.of(context).colorScheme;
+    final iconColor = colorScheme.onSurface;
 
     return SliverAppBar(
       expandedHeight: 300,
       pinned: true,
-      backgroundColor: Colors.white,
+      backgroundColor: colorScheme.surface,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
+        icon: Icon(Icons.arrow_back_ios_new, color: iconColor),
         onPressed: () => context.pop(),
       ),
       actions: [
         IconButton(
           icon: Icon(
             isFavorite ? Icons.favorite_rounded : Icons.favorite_border,
-            color: isFavorite ? Colors.red : Colors.white,
+            color: isFavorite ? colorScheme.error : iconColor,
           ),
           onPressed: () {
             ref.read(favoritesProvider.notifier).toggle(pokemon.name);

@@ -13,10 +13,11 @@ class PokemonDetailContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      decoration: BoxDecoration(
+        color: colorScheme.surface,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
       ),
       padding: const EdgeInsets.all(20),
       child: Column(
@@ -35,7 +36,9 @@ class PokemonDetailContent extends StatelessWidget {
             )!.pokemonNumber(pokemon.id.toString().padLeft(3, '0')),
             style: Theme.of(
               context,
-            ).textTheme.titleMedium?.copyWith(color: Colors.grey.shade600),
+            ).textTheme.titleMedium?.copyWith(
+                  color: colorScheme.onSurfaceVariant,
+                ),
           ),
           const SizedBox(height: 12),
           Wrap(
@@ -93,7 +96,7 @@ class PokemonDetailContent extends StatelessWidget {
                 AppLocalizations.of(context)!.genderLabel,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey.shade700,
+                  color: colorScheme.onSurfaceVariant,
                 ),
               ),
             ),

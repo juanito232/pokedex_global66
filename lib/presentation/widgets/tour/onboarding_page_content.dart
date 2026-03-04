@@ -59,7 +59,7 @@ class OnboardingPageContent extends StatelessWidget {
             page.title,
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
-              color: const Color(0xFF333333),
+              color: theme.colorScheme.onSurface,
             ),
             textAlign: TextAlign.center,
           ),
@@ -67,7 +67,7 @@ class OnboardingPageContent extends StatelessWidget {
           Text(
             page.description,
             style: theme.textTheme.bodyLarge?.copyWith(
-              color: const Color(0xFF757575),
+              color: theme.colorScheme.onSurfaceVariant,
             ),
             textAlign: TextAlign.center,
           ),

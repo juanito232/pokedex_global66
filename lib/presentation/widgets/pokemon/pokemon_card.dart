@@ -131,26 +131,33 @@ class PokemonCard extends StatelessWidget {
                           Positioned(
                             top: 0,
                             right: 0,
-                            child: Material(
-                              color: Colors.white.withValues(alpha: 0.9),
-                              shape: const CircleBorder(),
-                              elevation: 2,
-                              child: InkWell(
-                                onTap: onFavoriteTap,
-                                customBorder: const CircleBorder(),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8),
-                                  child: Icon(
-                                    isFavorite
-                                        ? Icons.favorite_rounded
-                                        : Icons.favorite_border,
-                                    size: 20,
-                                    color: isFavorite
-                                        ? Colors.red
-                                        : Colors.grey,
+                            child: Builder(
+                              builder: (context) {
+                                final colorScheme =
+                                    Theme.of(context).colorScheme;
+                                return Material(
+                                  color: colorScheme.surface
+                                      .withValues(alpha: 0.9),
+                                  shape: const CircleBorder(),
+                                  elevation: 2,
+                                  child: InkWell(
+                                    onTap: onFavoriteTap,
+                                    customBorder: const CircleBorder(),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8),
+                                      child: Icon(
+                                        isFavorite
+                                            ? Icons.favorite_rounded
+                                            : Icons.favorite_border,
+                                        size: 20,
+                                        color: isFavorite
+                                            ? colorScheme.error
+                                            : colorScheme.onSurfaceVariant,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
+                                );
+                              },
                             ),
                           ),
                       ],

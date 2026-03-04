@@ -16,13 +16,15 @@ class PokemonSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final outlineColor =
+        Theme.of(context).colorScheme.outlineVariant;
     final searchField = TextField(
       controller: controller,
       onChanged: onChanged,
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide(color: Colors.grey.shade300),
+          borderSide: BorderSide(color: outlineColor),
         ),
         hintText: hintText ?? 'Search Pokémon...',
         prefixIcon: const Icon(Icons.search),

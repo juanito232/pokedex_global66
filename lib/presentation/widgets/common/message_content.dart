@@ -36,7 +36,7 @@ class MessageContent extends StatelessWidget {
             displayTitle,
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
-              color: const Color(0xFF333333),
+              color: theme.colorScheme.onSurface,
             ),
             textAlign: TextAlign.center,
           ),
@@ -44,7 +44,7 @@ class MessageContent extends StatelessWidget {
           Text(
             displaySubtitle,
             style: theme.textTheme.bodyLarge?.copyWith(
-              color: const Color(0xFF757575),
+              color: theme.colorScheme.onSurfaceVariant,
             ),
             textAlign: TextAlign.center,
           ),

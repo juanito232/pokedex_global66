@@ -10,7 +10,30 @@ class AppTheme {
           primary: _seedColor,
           brightness: Brightness.light,
         ),
+        textTheme: _textTheme,
       );
+
+  static const _textTheme = TextTheme(
+    headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+    headlineMedium: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+    headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+    titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+    titleSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+    bodyLarge: TextStyle(fontSize: 16),
+    bodyMedium: TextStyle(fontSize: 14),
+    bodySmall: TextStyle(fontSize: 12),
+    labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+    labelMedium: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+    labelSmall: TextStyle(fontSize: 11, fontWeight: FontWeight.w500),
+  );
+
+  /// Semantic colors for gender display (male/female)
+  static const maleColor = Color(0xFF42A5F5);
+  static const femaleColor = Color(0xFFEC407A);
+
+  /// Fallback color for unknown Pokémon types
+  static const defaultTypeColor = Color(0xFFA8A878);
 
   static const typeColors = {
     'bug': Color(0xFF91C12F),

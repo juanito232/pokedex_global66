@@ -15,6 +15,8 @@ class PokemonInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final labelColor = colorScheme.onSurfaceVariant;
     return FadeInDown(
       duration: const Duration(milliseconds: 500),
       child: Column(
@@ -22,12 +24,12 @@ class PokemonInfoCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(icon, size: 24, color: Colors.grey.shade600),
+              Icon(icon, size: 24, color: labelColor),
               const SizedBox(width: 8),
               Text(
                 label,
                 style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                  color: Colors.grey.shade600,
+                  color: labelColor,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -38,7 +40,7 @@ class PokemonInfoCard extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Colors.grey.shade300),
+              border: Border.all(color: colorScheme.outlineVariant),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

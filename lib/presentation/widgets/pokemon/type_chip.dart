@@ -11,8 +11,10 @@ class TypeChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final color = Helpers.colorForType(pokemonType);
     final assetPath = Helpers.imagePathForType(pokemonType);
-
-    final fontSize = 13.0;
+    final colorScheme = Theme.of(context).colorScheme;
+    final textStyle = Theme.of(context).textTheme.labelMedium?.copyWith(
+          fontWeight: FontWeight.w600,
+        );
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -27,9 +29,9 @@ class TypeChip extends StatelessWidget {
             Container(
               height: 24,
               padding: const EdgeInsets.all(4),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white,
+                color: colorScheme.surface,
               ),
               child: SvgPicture.asset(assetPath, width: 16, height: 16),
             ),
@@ -37,7 +39,7 @@ class TypeChip extends StatelessWidget {
           ],
           Text(
             Helpers.capitalize(pokemonType),
-            style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600),
+            style: textStyle,
           ),
         ],
       ),

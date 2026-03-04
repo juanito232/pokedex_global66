@@ -3,7 +3,7 @@ import 'package:pokedex_global66/config/theme/app_theme.dart';
 
 class Helpers {
   static Color colorForType(String type) =>
-      AppTheme.typeColors[type.toLowerCase()] ?? const Color(0xFFA8A878);
+      AppTheme.typeColors[type.toLowerCase()] ?? AppTheme.defaultTypeColor;
 
   static String capitalize(String s) =>
       s.isEmpty ? s : '${s[0].toUpperCase()}${s.substring(1)}';
